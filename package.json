@@ -1,0 +1,31 @@
+{
+  "name": "anil.yakthumba.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anillimb/anil.yakthumba.com.git"
+  },
+  "keywords": [
+    "adsl435"
+  ],
+  "author": "anil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anillimb/anil.yakthumba.com/issues"
+  },
+  "homepage": "https://github.com/anillimb/anil.yakthumba.com#readme"
+}
