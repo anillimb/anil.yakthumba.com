@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
 		flexGrow: 1,
   },
+	appBar: {
+		backgroundColor: '#54b7e9',
+		color: '#fff',
+	},
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -33,11 +38,12 @@ const useStyles = makeStyles((theme) => ({
     },
 		'& ul': {
 			listStyle: 'none',
+			marginLeft: '-141px',
 			display: 'flex',
 			justifyContent: 'center',
 		},
 		'& li': {
-			paddingLeft: '15px',
+			paddingLeft: '25px',
 		},
 		'& a': {
 			textDecoration: 'none',
@@ -69,7 +75,7 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.navToolBar}>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
@@ -79,8 +85,8 @@ export default function Navbar() {
           </Typography>
 					<div  className={classes.unorderListItem}>
 						<ul>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
+							<li><Link href="/"><a>Home</a></Link></li>
+							<li><Link href="/about"><a>About</a></Link></li>
 						</ul>
 					</div>
 					<div className={classes.navCircleIcon}> 
