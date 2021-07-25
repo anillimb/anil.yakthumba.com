@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles((theme) => ({
@@ -9,12 +9,25 @@ const useStyles = makeStyles((theme) => ({
 		display:'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		paddingTop: '15px',
+		paddingTop: '40px',
 	},
 	aboutTitle: {
 
 	},
+	skillsContent: {
+		paddingTop: '50px',
+	},
+	boardDirectorListDivider: {
+		paddingTop: '30px',
+	},
 }));
+
+const skills = [
+	{ id: 1, title: 'HTML', content: 'I have five years experience in HTML.' },
+	{ id: 2, title: 'CSS', content: 'I have five years experience in CSS.' },
+	{ id: 3, title: 'Java Script', content: 'I have five years experience in Java Script.' },
+	{ id: 4, title: 'React Js', content: 'I have five years experience in React Js' },
+]
 
 function About() {
 
@@ -23,24 +36,29 @@ function About() {
   return(
 		<div>
 			<Navbar />
-			<section className={classes.aboutContent}>
-				<Typography variant="h2" component="h2" className={classes.aboutTitle}>
-					My skill's
-				</Typography>
+			<section>
+				<div  className={classes.aboutContent}>
+					<Typography variant="h2" component="h2" className={classes.aboutTitle}>
+						My skill's
+					</Typography>
+				</div>
 				<div>
-					<Grid container spacing={3}>
-						<Grid item xs={3}>
-							GRID
-						</Grid>
-						<Grid item xs={3}>
-						GRID
-						</Grid>
-						<Grid item xs={3}>
-						GRID
-						</Grid>
-						<Grid item xs={3}>
-						GRID
-						</Grid>
+					<Grid  container spacing={3} className={classes.skillsContent}>
+						{skills.map((item, index) => {
+								return(
+									<Grid key={`bod-${index}`} item xs={3}>
+										<Divider />
+											<div className={classes.boardDirectorListDivider} >
+												<Typography variant="h5" component="h5" >
+													{item.title}
+												</Typography>
+												<Typography variant="subtitle2" component="p">
+													{item.content}
+												</Typography>
+											</div>
+									</Grid>
+								);
+							})}
 					</Grid>
 				</div>
 			</section>

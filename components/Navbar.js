@@ -12,10 +12,12 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import "@fontsource/roboto";
 
 const useStyles = makeStyles((theme) => ({
   root: {
 		flexGrow: 1,
+		fontFamily: 'Roboto',
   },
 	appBar: {
 		backgroundColor: '#54b7e9',
