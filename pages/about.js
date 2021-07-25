@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 
 	},
 	skillsContent: {
-		paddingTop: '50px',
+		padding: '50px 30px 0px 30px',
 	},
 	boardDirectorListDivider: {
 		paddingTop: '30px',
