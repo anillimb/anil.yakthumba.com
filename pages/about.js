@@ -46,7 +46,7 @@ function About() {
 					<Grid  container spacing={3} className={classes.skillsContent}>
 						{skills.map((item, index) => {
 								return(
-									<Grid key={`bod-${index}`} item xs={3}>
+									<Grid key={`bod-${index}`} item xs={6} md={3}>
 										<Divider />
 											<div className={classes.boardDirectorListDivider} >
 												<Typography variant="h5" component="h5" >
