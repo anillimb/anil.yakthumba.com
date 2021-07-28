@@ -7,6 +7,8 @@ import Navbar from '../components/Navbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
+import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -44,18 +46,32 @@ const useStyles = makeStyles((theme) => ({
 		'& img': {
 			maxWidth: '100%'
 		}
-	}
+	},
+	aboutContent: {
+		display:'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		paddingTop: '40px',
+	},
+	aboutTitle: {
+
+	},
+	skillsContent: {
+		padding: '50px 30px 0px 30px',
+	},
+	boardDirectorListDivider: {
+		paddingTop: '30px',
+	},
 }));
 
 const images = [
 	{ id: '1', title: 'This is title', content: 'Thie content', img: '/images/image-1.jpg' },
-	{ id: '2', title: 'This is title', content: 'Thie content', img: '/images/image-4.jpg' },
+	{ id: '2', title: 'This is title', content: 'Thie content', img: '/images/image-8.jpg' },
 	{ id: '3', title: 'This is title', content: 'Thie content', img: '/images/image-6.jpg' },
-	{ id: '4', title: 'This is title', content: 'Thie content', img: '/images/image-2.jpg' },
-	{ id: '5', title: 'This is title', content: 'Thie content', img: '/images/image-6.jpg' },
+	{ id: '4', title: 'This is title', content: 'Thie content', img: '/images/image-10.jpg' },
+	{ id: '5', title: 'This is title', content: 'Thie content', img: '/images/image-11.jpg' },
 	{ id: '6', title: 'This is title', content: 'Thie content', img: '/images/image-5.jpg' },
 	{ id: '7', title: 'This is title', content: 'Thie content', img: '/images/image-7.jpg' },
-
 ]
 
 const Home = () => {
@@ -110,19 +126,25 @@ const Home = () => {
 						{images.map((item, index) => {
 							return (
 								<div className={styles.gridTitle} key={index}>
-									{/* <Typography variant="subtitle2">
-										Title
-									</Typography> */}
+									<div  className={styles.innerTitle}>
+										<Typography variant="h4">
+											Title
+										</Typography>
+										<Typography variant="body2">
+											This is paragraph
+										</Typography>
+									</div>
 									<div className={clsx(styles.gridItem, `item-${index+1}`)} onClick={() => getImg(item.img)}>
 										<img src={item.img} className={styles.img} />
 									</div>
+								
 								</div>
 							);
 						})}
 					</div>
 				</section>
 			</main>
-		</div >
+		</div>
 	);
 }
 

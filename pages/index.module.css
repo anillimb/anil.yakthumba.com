@@ -6,24 +6,39 @@
 	-moz-column-width: 33%;
 	column-width: 33%;
 	padding: 40px 12px;
-	
+}
+
+.gridTitle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.innerTitle {
+	color: #5dcec2;
+	position: absolute;
+	text-align: center;
+	padding-top: -10px;
 }
 
 .gridItem {
 	-webkit-transition: all 350ms ease;
-	transition: all 350ms ease;
 	cursor: pointer;
 	margin-bottom: 12px;
+	overflow: hidden;
 }
 
-.gridItem:hover {
+.gridItem:hover .img{
 	filter: opacity(.8);
-
+	transform: scale(1.1);
 }
 
-.img {
+.gridItem .img {
+	transition: transform .5s ease;
 	width: 100%;
 }
+
+
 
 @media (max-width: 991px) {
 	.galleryImages {
