@@ -9,10 +9,14 @@ import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
+import Footer from '../components/Footer';
 
 
 const useStyles = makeStyles((theme) => ({
 	banner: {
+		backgroundImage: 'url(/images/banner.jpg)',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
 		backgroundColor: '#86d4ab',
 		height: '500px',
 		display: 'flex',
@@ -25,12 +29,12 @@ const useStyles = makeStyles((theme) => ({
 	},
 	bannerBtn: {
 		marginTop: '13px',
-		color: '#fff',
+		color: '#000',
 		padding: '15px 46px',
-		backgroundColor: '#54b7e9',
+		backgroundColor: '#ffffff',
 		'&:hover': {
-			backgroundColor: '#fff',
-			color: '#000',
+			backgroundColor: '#61727f',
+			color: '#ffffff',
 		}
 	},
 	gallerySection: {
@@ -127,21 +131,25 @@ const Home = () => {
 							return (
 								<div className={styles.gridTitle} key={index}>
 									<div  className={styles.innerTitle}>
-										<Typography variant="h4">
-											Title
+										<Typography variant="h5" component="h5">
+											{item.title}
 										</Typography>
 										<Typography variant="body2">
-											This is paragraph
+											{item.content}
 										</Typography>
 									</div>
 									<div className={clsx(styles.gridItem, `item-${index+1}`)} onClick={() => getImg(item.img)}>
 										<img src={item.img} className={styles.img} />
 									</div>
-								
 								</div>
 							);
 						})}
 					</div>
+				</section>
+				<section>
+					<footer>
+						<Footer />
+					</footer>
 				</section>
 			</main>
 		</div>

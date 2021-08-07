@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles((theme) => ({
 	aboutContent: {
@@ -62,6 +63,7 @@ function About() {
 					</Grid>
 				</div>
 			</section>
+			<Footer />
 		</div>
 	);
 }

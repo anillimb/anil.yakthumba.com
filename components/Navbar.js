@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 		fontFamily: 'Roboto',
   },
 	appBar: {
-		backgroundColor: '#54b7e9',
+		backgroundColor: '#2a3134',
 		color: '#fff',
 	},
   menuButton: {

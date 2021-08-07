@@ -1,0 +1,28 @@
+.footerIcons {
+	margin: 40px 0 10px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.footerIcons svg {
+	text-align: center;
+}
+
+.footerIcons svg:not(:first-child) {
+	padding-left: 10px;
+}
+
+.largeIcon {
+	color: #4267B2;
+	font-size: 18px;
+}
+
+.footerIconText {
+	text-align: center;
+}
+
+.footerSection {
+	margin: 40px 0;
+}
