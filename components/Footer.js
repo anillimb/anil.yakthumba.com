@@ -16,7 +16,7 @@ const Footer = () => {
 						style={{fontSize: '40px', color: '#4267B2', cursor: 'pointer'}}
 					/>
 					<InstagramIcon 
-						style={{fontSize: '40px', color: '#833ab4', cursor: 'pointer'}}
+						style={{fontSize: '40px', color: '#c13584', cursor: 'pointer'}}
 					/>
 					<TwitterIcon 
 						style={{fontSize: '40px', color: '#1DA1F2', cursor: 'pointer'}}

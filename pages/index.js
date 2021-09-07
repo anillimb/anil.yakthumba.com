@@ -29,9 +29,9 @@ const useStyles = makeStyles((theme) => ({
 	},
 	bannerBtn: {
 		marginTop: '13px',
-		color: '#000',
+		color: '#ffffff',
 		padding: '15px 46px',
-		backgroundColor: '#ffffff',
+		backgroundColor: '#61727f',
 		'&:hover': {
 			backgroundColor: '#61727f',
 			color: '#ffffff',
@@ -144,6 +144,10 @@ const Home = () => {
 								</div>
 							);
 						})}
+					</div>
+					<div className={styles.galleryFooter}>
+						<h2 className={styles.galleryFooterText}>Im a Frontend Developer</h2>
+						<p className={styles.galleryFooterContent}>I have been working as a Frontend Developer more than 5 years.</p>
 					</div>
 				</section>
 				<section>

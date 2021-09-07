@@ -109,3 +109,18 @@
 	cursor: pointer;
 }
 
+.galleryFooter {
+	margin-top: -100px;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+}
+
+.galleryFooterText {
+	text-align: center;
+}
+
+.galleryFooterContent {
+	text-align: center;
+}
+
